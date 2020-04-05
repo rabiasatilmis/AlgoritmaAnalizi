@@ -1,0 +1,12 @@
+def myf_2(l =[4,-3,5,-2,-1,2,6,-2]):
+    n=len(l)
+    maxSum=0
+    s=0
+    for i in range(n):
+        t=0
+        for j in range(i,n):
+            t=t+l[j]
+            s=s+1
+        if t>maxSum:
+            maxSum=t
+    return maxSum,s
