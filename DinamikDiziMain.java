@@ -4,7 +4,7 @@ public class DinamikDiziMain {
 
 	public static void main(String[] args){
 		
-			DynamicArray dizi = new DynamicArray();
+		DynamicArray dizi = new DynamicArray();
 	 
 	        dizi.Append(10);
 	        dizi.Append(20);
@@ -25,12 +25,12 @@ class DynamicArray {
 
     public void Append(int eleman) {
         if (sayac == boyut) {
-            //Dizi boyutu iki katýna çýkarýlýyor.
+            //Dizi boyutu iki katÄ±na Ã§Ä±karÄ±lÄ±yor.
             boyut = 2 * boyut;
             final int[] geciciDizi = new int[boyut];
-            //yeni boyut ile oluþturulan geciciDizi'ye A dizisinin elemanlarý kopyalanýyor.
+            //yeni boyut ile oluÅŸturulan geciciDizi'ye A dizisinin elemanlarÄ± kopyalanÄ±yor.
             System.arraycopy(A, 0, geciciDizi, 0, A.length);
-            //A dizisine yeni oluþturulan geciciDizi kopyalanýyor.
+            //A dizisine yeni oluÅŸturulan geciciDizi kopyalanÄ±yor.
             A = geciciDizi;
         }
         A[sayac] = eleman;
@@ -40,15 +40,15 @@ class DynamicArray {
     public void Remove() {
         if (sayac > 0) {
             sayac--;
-            A[sayac] = 0; // En son eklenen eleman 0 yapýlýyor.
+            A[sayac] = 0; // En son eklenen eleman 0 yapÄ±lÄ±yor.
         }
         if (sayac == boyut / 4) {
-            //Dizi boyutu yarýya indiriliyor.
+            //Dizi boyutu yarÄ±ya indiriliyor.
             boyut = boyut / 2;
             final int[] geciciDizi = new int[boyut];
-            //yeni boyut ile oluþturulan diziye a dizisinin elemanlarý kopyalanýyor.
+            //yeni boyut ile oluÅŸturulan diziye a dizisinin elemanlarÄ± kopyalanÄ±yor.
             System.arraycopy(A, 0, geciciDizi, 0, geciciDizi.length);
-            //A dizisine yeni oluþturulan geciciDizi kopyalanýyor.
+            //A dizisine yeni oluÅŸturulan geciciDizi kopyalanÄ±yor.
             A = geciciDizi;
         }
     }
